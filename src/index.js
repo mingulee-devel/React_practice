@@ -7,14 +7,18 @@ import Exam02_mui_Login from './exam02_mui_Login';
 import Exam03_routerDOM from "./exam03_routerDOM";
 import Exam04_redux from "./exam04_redux";
 import Exam05_reduxToolkit from './exam05_reduxToolkit';
-
+import ModalMainComponent from './exam07_modal';
+import ReactModalComponent from './exam07_reactModal';
+import TabComponent from './exam08_tab';
+import BasicTable from './exam09_tbl';
+import CheckTable from './exam10_tblCheck';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, NavLink, Route, Routes} from "react-router-dom";
 
 function Route_custom(){
 		return (
 				<BrowserRouter>
-						<Exam05_reduxToolkit></Exam05_reduxToolkit>
+					<ModalMainComponent></ModalMainComponent>
 						{/*<div>
 								<h1>Hello Router</h1>
 								<ul>
