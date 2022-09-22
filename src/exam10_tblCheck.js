@@ -21,6 +21,7 @@ import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
+import Button from "@mui/material/Button";
 
 function createData(name, calories, fat, carbs, protein) {
 	return {
@@ -247,13 +248,17 @@ export default function EnhancedTable() {
 
 	const handleClick = (event, name) => {
 		const selectedIndex = selected.indexOf(name);
+		console.log('handleClick');
+		console.log(selectedIndex);
+		console.log(selected);
+
 		let newSelected = [];
 
 		if (selectedIndex === -1) {
 			newSelected = newSelected.concat(selected, name);
 		} else if (selectedIndex === 0) {
 			newSelected = newSelected.concat(selected.slice(1));
-		} else if (selectedIndex === selected.length - 1) {
+		} else if (selectedIndex === selected.length - 1) { //방금 눌렀던 것 다시 누르면
 			newSelected = newSelected.concat(selected.slice(0, -1));
 		} else if (selectedIndex > 0) {
 			newSelected = newSelected.concat(
@@ -283,6 +288,11 @@ export default function EnhancedTable() {
 	// Avoid a layout jump when reaching the last page with empty rows.
 	const emptyRows =
 		page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+
+	function getData(event){
+		console.log('데이터 체크');
+		console.log(selected);
+	}
 
 	return (
 		<Box sx={{ width: '100%' }}>
@@ -371,6 +381,7 @@ export default function EnhancedTable() {
 				control={<Switch checked={dense} onChange={handleChangeDense} />}
 				label="Dense padding"
 			/>
+			<Button onClick={getData}>데이터 체크</Button>
 		</Box>
 	);
 }

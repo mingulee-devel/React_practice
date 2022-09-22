@@ -13,12 +13,13 @@ import TabComponent from './exam08_tab';
 import BasicTable from './exam09_tbl';
 import CheckTable from './exam10_tblCheck';
 import reportWebVitals from './reportWebVitals';
+import datagridComponent from './tblDatagrid';
 import {BrowserRouter, NavLink, Route, Routes} from "react-router-dom";
 
 function Route_custom(){
 		return (
 				<BrowserRouter>
-					<ModalMainComponent></ModalMainComponent>
+					<CheckTable></CheckTable>
 						{/*<div>
 								<h1>Hello Router</h1>
 								<ul>
