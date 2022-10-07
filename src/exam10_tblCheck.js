@@ -226,7 +226,7 @@ EnhancedTableToolbar.propTypes = {
 export default function EnhancedTable() {
 	const [order, setOrder] = React.useState('asc');
 	const [orderBy, setOrderBy] = React.useState('calories');
-	const [selected, setSelected] = React.useState([]);
+	const [selected, setSelected] = React.useState([]); //선택한 데이터
 	const [page, setPage] = React.useState(0);
 	const [dense, setDense] = React.useState(false);
 	const [rowsPerPage, setRowsPerPage] = React.useState(5);

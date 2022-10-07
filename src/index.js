@@ -12,6 +12,11 @@ import ReactModalComponent from './exam07_reactModal';
 import TabComponent from './exam08_tab';
 import BasicTable from './exam09_tbl';
 import CheckTable from './exam10_tblCheck';
+import OldTable from './exam10_oldTable';
+import DndTable from './exam11_tableDnd';
+import CollapsibleTable from './exam12_collapsibleTable';
+import ScrollTable from './exam13_scrollTable';
+import CheckTreeView from './exam14_TreeViewWithCheck';
 import reportWebVitals from './reportWebVitals';
 import datagridComponent from './tblDatagrid';
 import {BrowserRouter, NavLink, Route, Routes} from "react-router-dom";
@@ -19,7 +24,7 @@ import {BrowserRouter, NavLink, Route, Routes} from "react-router-dom";
 function Route_custom(){
 		return (
 				<BrowserRouter>
-					<CheckTable></CheckTable>
+					<CheckTreeView></CheckTreeView>
 						{/*<div>
 								<h1>Hello Router</h1>
 								<ul>
