@@ -27,6 +27,9 @@ export default function RecursiveTreeView() {
 	//node is always the root "Parent"
 	//id is id of node clicked
 	function getChildById(node: RenderTree, id: string) {
+
+		console.log(node);
+		console.log(id);
 		let array: string[] = [];
 
 		//returns an array of nodes ids: clicked node id and all children node ids
@@ -45,6 +48,8 @@ export default function RecursiveTreeView() {
 		//returns the node object that was selected
 		function getNodeById(nodes: RenderTree, id: string) {
 			if (nodes.id === id) {
+				console.log("nodes");
+				console.log(nodes);
 				return nodes;
 			} else if (Array.isArray(nodes.children)) {
 				let result = null;
@@ -53,6 +58,8 @@ export default function RecursiveTreeView() {
 						result = getNodeById(node, id);
 					}
 				});
+				console.log("result");
+				console.log(result);
 				return result;
 			}
 
@@ -67,6 +74,13 @@ export default function RecursiveTreeView() {
 		const allNode: string[] = getChildById(data, nodes.id);
 		//combines newly selected nodes with existing selection
 		//or filters out newly deselected nodes from existing selection
+
+		console.log(checked);
+		console.log(data);
+		console.log(nodes);
+		console.log(selected);
+		console.log(allNode);
+
 		let array = checked
 			? [...selected, ...allNode]
 			: selected.filter((value) => !allNode.includes(value));

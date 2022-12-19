@@ -20,11 +20,12 @@ import CheckTreeView from './exam14_TreeViewWithCheck';
 import reportWebVitals from './reportWebVitals';
 import datagridComponent from './tblDatagrid';
 import {BrowserRouter, NavLink, Route, Routes} from "react-router-dom";
+import RowOrderingGrid from "./exam15_DataGridDnD";
 
 function Route_custom(){
 		return (
 				<BrowserRouter>
-					<CheckTreeView></CheckTreeView>
+					<RowOrderingGrid></RowOrderingGrid>
 						{/*<div>
 								<h1>Hello Router</h1>
 								<ul>
