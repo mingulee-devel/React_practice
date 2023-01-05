@@ -21,11 +21,12 @@ import reportWebVitals from './reportWebVitals';
 import datagridComponent from './tblDatagrid';
 import {BrowserRouter, NavLink, Route, Routes} from "react-router-dom";
 import RowOrderingGrid from "./exam15_DataGridDnD";
+import InfiniteScrollTest from './infiniteScroll/InfiniteScrollTest';
 
 function Route_custom(){
 		return (
 				<BrowserRouter>
-					<RowOrderingGrid></RowOrderingGrid>
+					<InfiniteScrollTest></InfiniteScrollTest>
 						{/*<div>
 								<h1>Hello Router</h1>
 								<ul>
